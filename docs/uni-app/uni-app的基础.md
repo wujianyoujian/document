@@ -181,25 +181,60 @@ export default {
 ?> 这只是`html`部分的代码, 对于`js`和`css`也需要进行条件编译, 只是注释方式不一样
 ## 生命周期
 ### 应用生命周期
-!> `app.vue`
-* onLaunch
+!> 只在`app.vue`中存在 
+* `onLaunch`
 > 应用初始化触发一次，全局只触发一次 
-* onShow
+* `onShow`
 > 应用启动，从后台进入前台触发
-* onHide
+* `onHide`
 > 从前台进行后台触发
 ### 页面生命周期
 * `onLoad`
   > 监听页面加载
-* `onReady`
-  > 页面初次渲染完成
 * `onShow`
   > 页面的显示
+* `onReady`
+  > 页面初次渲染完成
 * `onHide`
   > 页面隐藏
 * `onUnload`
   > 页面卸载
+### 组件的生命周期
+!> 和vue的生命周期是一样的
 
-## 项目当中的路径问题
+  > [生命周期函数](https://cn.vuejs.org/v2/guide/instance.html#%E5%AE%9E%E4%BE%8B%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90)
+
+## 项目配置
+### 项目结构
+```
+├─components  
+├─pages   
+├─static  
+├─unpackage  
+├─App.vue  
+├─main.js  
+├─manifest.json  
+├─pages.json  
+├─uni.scss
+├───
+```
+* `pages`
+> 和微信小程序差不多，存放页面
+* `static`
+> 存放静态文件
+* `unpackage`
+> 打包好的文件
+* `App.vue`
+> 和`vue`当中根组件的作用一样
+* `main.js`
+> 项目的入口文件
+* `manifest.json`
+> 应用的配置文件，用于指定应用的名称，图标，权限等
+* `pages.json`
+> 和微信小程序的一样，页面文件的路径，窗口样式等
+* `uni-scss`
+### 在项目中使用`scss`
+> 下载`scss`编译插件
+### 项目当中的路径问题
 * `@`
 > 表示项目的根路径
