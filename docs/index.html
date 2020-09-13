@@ -73,5 +73,11 @@
   <script src="./js/countable.js"></script>
   <!-- 兼容vue -->
   <script src="//cdn.jsdelivr.net/npm/vue"></script>
+  <!-- 离线 -->
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script>
 </body>
 </html>
