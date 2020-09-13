@@ -204,6 +204,13 @@ export default {
 
   > [生命周期函数](https://cn.vuejs.org/v2/guide/instance.html#%E5%AE%9E%E4%BE%8B%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90)
 
+### 一些其它的生命周期
+#### `onTabItemTap`
+> 当tabBar切换的时候会进行触发, 参数是当前页面路径的数据
+## 项目运行
+### 运行到`ios`
+* 先电脑安装·爱思助手·, 再手机连接电脑
+* 直接运行, 之后还需要在手机信任企业证书, 应用才会正确打开
 ## 项目配置
 ### 项目结构
 ```
@@ -233,6 +240,41 @@ export default {
 * `pages.json`
 > 和微信小程序的一样，页面文件的路径，窗口样式等
 * `uni-scss`
+### 底部导航栏(tabBar)
+> 和微信小程序的底部导航栏一样, 可以设置
+* `text`
+> 文本
+* `pagePath`
+> 页面的路径
+* `iconPath`
+> 图标的路径
+* `selectedIconPath`
+> 例子
+```json
+"tabBar": {
+    "color": "#666",
+    "selectedColor":"#f07373",
+    "backgroundColor":"#fff",
+    "list": [{
+        "text": "首页",
+        "pagePath":"pages/index/index",
+        "iconPath":"static/home.png",
+        "selectedIconPath":"static/home-active.png"
+      }, {
+        "text":"收藏",
+        "pagePath":"pages/follow/follow",
+        "iconPath":"static/follow.png",
+        "selectedIconPath":"static/follow-active.png"
+      }, {
+        "text":"我的",
+        "pagePath":"pages/my/my",
+        "iconPath":"static/my.png",
+        "selectedIconPath":"static/my-active.png"
+      }
+    ]
+  }
+```
+> 点击选择图表的路径
 ### 在项目中使用`scss`
 > 下载`scss`编译插件
 ### 项目当中的路径问题
