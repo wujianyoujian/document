@@ -11,10 +11,16 @@
 
 * **前端**
 
+  * [基础](/前端/README.md)
+
   * <p style="font-size:20px;">数据结构与算法</p>
     
     * [基础](/前端/数据结构与算法/README.md)
   
+  * <p style="font-size:20px">vue</p>
+    
+    * [vuex](/前端/vue/vuex.md)
+
   * <p style="font-size:20px;">Electron</p>
     
     * [配置](/前端/electron/配置.md)
