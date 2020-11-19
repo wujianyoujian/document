@@ -6,5 +6,13 @@
 * `navigateTo`
 > 页面被隐藏(导航到)
 
+### 获取信息
+
+#### 获取系统信息
+> `getSystemInfoSync`
+
+#### 获取微信小程序等胶囊体的信息
+> `getMenuButtonBoundingClientRect`
+
 ### 选择图片
 * `chooseImage`

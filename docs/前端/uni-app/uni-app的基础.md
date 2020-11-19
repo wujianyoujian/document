@@ -46,8 +46,21 @@ export default {
 
 > [通过vue-cli创建项目](https://uniapp.dcloud.io/quickstart?id=_2-%e9%80%9a%e8%bf%87vue-cli%e5%91%bd%e4%bb%a4%e8%a1%8c)
 
+### 字体图标
+* 从阿里云字体图标网站下载  
+
+* 从uni-app下载字体插件直接使用
+> [icons](https://ext.dcloud.net.cn/plugin?id=28)  
+> 插件下载后直接下载到components文件夹中, 可以直接easycom, 不许需要在另外的引入
+
 ## 组件
 > [组件Api网站](https://uniapp.dcloud.io/component/README)
+
+### 组件导入
+> 像vue中那样进行导入  
+> uni-app有easy com, 自动导入的功能, 文件夹名字和组件名字是一样的话
+> components/组件名/组件名.vue
+
 ### view
 > 与`div`类似, 用来包裹各种标签和组件
 
@@ -278,9 +291,11 @@ export default {
 
 ### 自定义导航栏
 * 首先设置页面样式里面
-> `"navigationStyle":"custom"`
+> `"navigationStyle":"custom"`  设置后不会显示导航的标题  
+> `"navigationBarTextStyle": "white | black"` 只有黑色和白色可以进行设置, 设置导航栏的文字颜色和状态栏
 ### 在项目中使用`scss`
 > 下载`scss`编译插件
+
 ### 项目当中的路径问题
 * `@`
 > 表示项目的根路径

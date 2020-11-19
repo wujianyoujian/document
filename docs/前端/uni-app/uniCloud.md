@@ -57,12 +57,12 @@ const collection = db.collection('user')
 params: Object {
   // 函数名
   name: string,
-  // 数据
+  // 参数
   data: Object,
   // 成功的回调
   success: function,
 }
-
+// 可以使用promise的方法返回
 /* 云函数 */
 # 包含上传的参数
 event: Object
