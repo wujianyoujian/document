@@ -49,6 +49,14 @@ const collection = db.collection('user')
 * `where().get()`
 > 添加查找
 
+#### 字段
+> `field` 指定需要返回的字段
+> 为`false`不返回这个字段, 为`true`只返回这个字段
+```javascript
+db.collection('article').field({'content': false}).get()
+```
+#### 聚合
+> 
 ## uniCloud.
 ### `callFunction`
 > 执行云服务空间的函数

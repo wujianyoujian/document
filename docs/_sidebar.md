@@ -9,9 +9,17 @@
   * [API](/NodeJS/API.md)
   * [使用](/NodeJS/使用.md)
 
+* <p style="font-size:20px;">Python</p>
+  
+  * [API](/Python/基础.md)
+
 * <p style="font-size:20px;">JAVA</p>
-* 
-  * [基础](/JAVA/基础.md) 
+
+  * [基础](/JAVA/基础.md)
+
+* **数据库**
+
+* [mongodb](/数据库/mongodb.md)
 
 * **前端**
 
@@ -37,6 +45,7 @@
       * [uni-app的基础](/前端/uni-app/uni-app的基础.md)
       * [uniappAPI](/前端/uni-app/uni-API.md)
       * [uniCloud](/前端/uni-app/uniCloud.md)
+      * [出现的问题](/前端/uni-app/出现问题.md)
 
   * <p style="font-size:20px;">angular</p>
     
