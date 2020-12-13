@@ -50,7 +50,6 @@ function pluginsForAddNote(hook, vm) {
     // ...
     // 异步处理完成后调用 next(html) 返回结果
     addNoteList();
-    console.log(html)
     next(html);
   });
 
