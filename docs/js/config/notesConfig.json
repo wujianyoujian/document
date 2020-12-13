@@ -2,48 +2,48 @@
   "type": "前端",
   "noteList": [
     {
-      "imgUrl": "img/note.jpg",
-      "noteInfo": "JavaScript基础",
-      "path": "前端/README.md"
+      "imgUrl": "img/note/js.png",
+      "noteInfo": "前端基础",
+      "path": "前端/JS/README.md"
     },
     {
-      "imgUrl": "img/note.jpg",
+      "imgUrl": "img/note/算法.png",
       "noteInfo": "数据结构与算法",
       "path": "前端/数据结构与算法/README.md"
     },
     {
-      "imgUrl": "img/note.jpg",
+      "imgUrl": "img/note/vuejs.png",
       "noteInfo": "vue",
       "path": "前端/vue/README.md"
     },
     {
-      "imgUrl": "img/note.jpg",
+      "imgUrl": "img/note/angular.png",
       "noteInfo": "angular",
       "path": "前端/angular/README.md"
     },
     {
-      "imgUrl": "img/note.jpg",
+      "imgUrl": "img/note/app.png",
       "noteInfo": "uni-app",
       "path": "前端/uni-app/README.md"
     },
     {
-      "imgUrl": "img/note.jpg",
+      "imgUrl": "img/note/electron.png",
       "noteInfo": "electron",
       "path": "前端/electron/README.md"
     }
   ]
 }, {
-  "type": "工具使用",
-  "noteList": [{
-    "imgUrl": "img/note.jpg",
-    "noteInfo": "Git",
-    "path": "Git/README.md"
-  }]
-}, {
   "type": "NodeJS",
   "noteList": [{
-    "imgUrl": "img/note.jpg",
+    "imgUrl": "img/note/node.png",
     "noteInfo": "NodeJS",
     "path": "NodeJS/README.md"
+  }]
+}, {
+  "type": "工具使用",
+  "noteList": [{
+    "imgUrl": "img/note/git.png",
+    "noteInfo": "Git",
+    "path": "Git/README.md"
   }]
 }]
