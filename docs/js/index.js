@@ -1,5 +1,5 @@
 function addNoteList() {
-  let serverURl = 'http://localhost:3000/#/'
+  let serverURl = '/#/'
   $.ajax({
     url: 'js/config/notesConfig.json',
     type: 'GET',
