@@ -40,6 +40,13 @@
     "path": "NodeJS/README.md"
   }]
 }, {
+  "type": "数据库",
+  "noteList": [{
+    "imgUrl": "https://gitee.com/wuyouwujian/picture-bed/raw/master/image/MongoDB.png",
+    "noteInfo": "MongoDB",
+    "path": "数据库/README.md"
+  }]
+}, {
   "type": "工具使用",
   "noteList": [{
     "imgUrl": "https://gitee.com/wuyouwujian/picture-bed/raw/master/image/git.png",
