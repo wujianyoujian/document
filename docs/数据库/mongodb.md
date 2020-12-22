@@ -9,14 +9,14 @@
 > `mongo`
 
 * 带参数的链接
-> `mongo "mongodb://username:password@host[:port]/defaultauthdb?<options>"`  
-> 带有用户名密码, 主机, 指定数据库, 连接参数
+> `mongo "mongodb://username:password@host:port/defaultauthdb?<options>"`  
+> 带有`username`用户名`password`密码, `host`主机, `port`端口, `defaultauthdb`指定数据库, 连接参数
 
 ## 命令
 
 ### 用户
 
-#### 创建用
+#### 创建用户
 > 数据库带的角色
 * `Read`：允许用户读取指定数据库
 * `readWrite`：允许用户读写指定数据库

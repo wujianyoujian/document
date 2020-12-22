@@ -1,5 +1,11 @@
 function addNoteList() {
-  let serverURl = '/document/#/'
+  let developUrl = window.location.href
+  let serverURl
+  if (developUrl.indexOf('io') !== -1) {
+    serverURl = '/document/#/'
+  } else {
+    serverURl = '/#/'
+  }
   $.ajax({
     url: 'js/config/notesConfig.json',
     type: 'GET',
