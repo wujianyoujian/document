@@ -4,11 +4,21 @@
 
 ### Cesium.Viewer
 > 构建一个地球
+
+```html
+<!-- 需要引入 widgets.css, Cesium.js 两个文件-->
+<link href="https://cesium.com/downloads/cesiumjs/releases/1.76/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+<script src="https://cesium.com/downloads/cesiumjs/releases/1.76/Build/Cesium/Cesium.js"></script>
+<div id="container"></div>
+```
+
 ```javascript
 new Cesium.Viewer("cesiumContainer", {
 
 })
 ```
+
+![avatar](/image/1.png)
 
 #### option
 ?> 上面构建地球配置参数
@@ -18,7 +28,6 @@ new Cesium.Viewer("cesiumContainer", {
 
 * `imageryProviderViewModels`
 > 地球底图
-
 > 接受一个`new Cesium.ProviderViewModel（视图模型）`的数组对象
 
 ```javascript
@@ -435,6 +444,19 @@ var palaceTileset = new Cesium.Cesium3DTileset({
 });
 viewer.scene.primitives.add(palaceTileset);
 viewer.flyTo(palaceTileset);
+```
+
+#### 加载影像数据
+```javascript
+let gaodeWorld = new Cesium.UrlTemplateImageryProvider({
+    url: "http://webst01.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}",
+    format: "image/jpeg",
+    tileMatrixSetID: "GoogleMapsCompatible"
+})
+
+let esriImgWorld = new Cesium.ArcGisMapServerImageryProvider({
+    url: "http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer",
+})
 ```
 
 
