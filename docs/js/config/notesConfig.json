@@ -30,6 +30,10 @@
       "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/electron.png",
       "noteInfo": "electron",
       "path": "前端/electron/README.md"
+    },{
+      "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/map.png",
+      "noteInfo": "cesium",
+      "path": "前端/cesium/README.md"
     }
   ]
 }, {
