@@ -39,27 +39,18 @@ console.timeEnd('doSomething')
 ```
 > ` doSomething: 12.890ms`
 
-## 第三方模块
-
-### `Progress`
-[官网](https://www.npmjs.com/package/progress)
-
-> 控制台创建进度条  
-
-?> `npm install progress`, `yarn add progress`
-
-### `nodemon`
-
-> 更改代码之后之后自动重启
-?> `npm install nodemon --save-dev `, `yarn add nodemon --dev` 
-
 ## 一些命令
+
+> 对于安装的模块使用命令, 在控制台使用`npx`来执行
 ### npm
+
 #### 全局
+
 > `npm root -g` 全局安装目录
 ### yarn
 * `yarn add <package_name> --dev` 开发环境依赖
 * `yarn add <package_name>` 环境依赖
+
 #### 全局
 > `yarn global` 显示一些全局命令  
 > `yarn global add <package_name>` 全局安装  
