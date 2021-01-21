@@ -175,11 +175,6 @@ var bluePlane = viewer.entities.add({
 ### Cesium.Cartesian3
 > 3d笛卡尔点
 
-### das3d
-[API](http://das-earth-website.obs.cn-east-2.myhuaweicloud.com/das3DMap/api.html#TerrainLayer)
-[例子](http://das-earth-website.obs.cn-east-2.myhuaweicloud.com/das3DMap/index.html#baselayer)
-> 基于cesium封装的框架
-
 ### Cesium.PrimitiveCollection
 > 原始体集合
 
@@ -192,6 +187,10 @@ viewer.scene.primitives.add(new Cesium.PointPrimitiveCollection())
 ### Cesium.Model
 > 基于gltf的3d模型
 
+## das3d
+[API](http://das-earth-website.obs.cn-east-2.myhuaweicloud.com/das3DMap/api.html#TerrainLayer)
+[例子](http://das-earth-website.obs.cn-east-2.myhuaweicloud.com/das3DMap/index.html#baselayer)
+> 基于cesium封装的框架
 #### das3d.ViewerEx
 > 扩展, 控件
 ```javascript
@@ -356,6 +355,8 @@ GeoJson
 > 对数据结果进行编码的格式, 支持点，线，面，多点，多线，多面，几何体
 KML
 CZML
+
+## 功能实现
 
 ### 添加模型的几种方法
 
