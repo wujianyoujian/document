@@ -44,7 +44,7 @@
 
 * 每一次提交记录都会保存, 每一次提交会自动组成一条时间线，如下图所示
 
-	![在这里插入图片描述](https://img-blog.csdnimg.cn/20200628091949414.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxNzEzNzIx,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200628091949414.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxNzEzNzIx,size_16,color_FFFFFF,t_70)
 
 * 查看每次提交的记录
 
@@ -220,19 +220,15 @@
 
   2. 再删除远程分支, `git push origin :refs/origin/<tag_name>`
 
-     
-
-
-
 ### 参考网站
 
 [廖雪峰的git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
 
 ### 注意
 
-之前添加了`SSH`密码导致每一次提交远程的时候，都要输入密码
+!> 之前添加了`SSH`密码导致每一次提交远程的时候，都要输入密码
 
-解决方法就是将密码设置为空
+?> 解决方法就是将密码设置为空
 
 1. 输入`ssh-keygen -p`  
     ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200628092203900.png)
@@ -240,5 +236,12 @@
 2. 输入你原来的密码
 
 3. 输入新密码，按下`enter`, 再次输入再按下`enter`, 解决了问题
+[在这里插入图片描述](https://img-blog.csdnimg.cn/20200628091812767.png)
 
-	![在这里插入图片描述](https://img-blog.csdnimg.cn/20200628091812767.png)
+!> 如果本地仓库不是通过远程仓库克隆下来的, 在提交本地仓库到远程时, 就会发生问题, 因为仓库的提交记录不一样.这就识别成了两个仓库  
+
+?> 和并仓库的提交历史 `git pull origin master --allow-unrelated-histories`
+
+!> 有时候出现仓库并不存在的情况, 可能是因为远程仓库的地址变了,只需要改变本地关联的地址就可以了  
+
+?> `git remote set-url origin <repo_url>`

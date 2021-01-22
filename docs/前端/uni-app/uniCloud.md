@@ -56,7 +56,40 @@ const collection = db.collection('user')
 db.collection('article').field({'content': false}).get()
 ```
 #### 聚合
-> 
+[聚合操作](https://uniapp.dcloud.io/uniCloud/cf-database?id=aggregate)
+
+> 进行聚合操作之前需要加上`.aggregate()`表示要进行聚合操作
+
+##### `match`
+> 查找匹配的文档
+
+```javascript
+db.collection('articles').aggregate()
+  .match({
+    title: 'title1'
+  })
+  .end()
+```
+##### `project`
+> 某个字段是否返回
+
+```javascript
+db.collection('articles').aggregate()
+  .project({
+    title: 0 // 表示去除title字段, 其他字段全部返回
+  })
+  .end()
+
+db.collection('articles').aggregate()
+.project({
+  title: 1 // 只会返回默认的_id, 和指定的title字段
+  })
+  .end()
+```
+
+##### `end`
+> 表示聚合操作定义完成, 发起操作
+
 ## uniCloud.
 ### `callFunction`
 > 执行云服务空间的函数

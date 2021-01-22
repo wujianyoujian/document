@@ -1,56 +1,77 @@
-[{
-  "type": "前端",
-  "noteList": [
-    {
-      "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/js.png",
-      "noteInfo": "前端基础",
-      "path": "前端/JS/README.md"
-    },
-    {
-      "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/算法.png",
-      "noteInfo": "数据结构与算法",
-      "path": "前端/数据结构与算法/README.md"
-    },
-    {
-      "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/vuejs.png",
-      "noteInfo": "vue",
-      "path": "前端/vue/README.md"
-    },
-    {
-      "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/angular.png",
-      "noteInfo": "angular",
-      "path": "前端/angular/README.md"
-    },
-    {
-      "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/app.png",
-      "noteInfo": "uni-app",
-      "path": "前端/uni-app/README.md"
-    },
-    {
-      "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/electron.png",
-      "noteInfo": "electron",
-      "path": "前端/electron/README.md"
-    }
-  ]
-}, {
-  "type": "NodeJS",
-  "noteList": [{
-    "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/node.png",
-    "noteInfo": "NodeJS",
-    "path": "NodeJS/README.md"
-  }]
-}, {
-  "type": "数据库",
-  "noteList": [{
-    "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/MongoDB.png",
-    "noteInfo": "MongoDB",
-    "path": "数据库/README.md"
-  }]
-}, {
-  "type": "工具使用",
-  "noteList": [{
-    "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/git.png",
-    "noteInfo": "Git",
-    "path": "Git/README.md"
-  }]
-}]
+[
+  {
+    "type": "前端",
+    "noteList": [
+      {
+        "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/js.png",
+        "noteInfo": "前端基础",
+        "path": "前端/JS/README.md"
+      },
+      {
+        "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/算法.png",
+        "noteInfo": "数据结构与算法",
+        "path": "前端/数据结构与算法/README.md"
+      },
+      {
+        "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/vuejs.png",
+        "noteInfo": "vue",
+        "path": "前端/vue/README.md"
+      },
+      {
+        "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/angular.png",
+        "noteInfo": "angular",
+        "path": "前端/angular/README.md"
+      },
+      {
+        "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/app.png",
+        "noteInfo": "uni-app",
+        "path": "前端/uni-app/README.md"
+      },
+      {
+        "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/electron.png",
+        "noteInfo": "electron",
+        "path": "前端/electron/README.md"
+      }
+    ]
+  },
+  {
+    "type": "后端",
+    "noteList": [
+      {
+        "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/node.png",
+        "noteInfo": "NodeJS",
+        "path": "NodeJS/README.md"
+      },
+      {
+        "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/python.png",
+        "noteInfo": "Python",
+        "path": "python/README.md"
+      },
+      {
+        "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/java.png",
+        "noteInfo": "Java",
+        "path": "Java/README.md"
+      }
+    ]
+  },
+  {
+    "type": "数据库",
+    "noteList": [
+      {
+        "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/MongoDB.png",
+        "noteInfo": "MongoDB",
+        "path": "数据库/README.md"
+      }
+    ]
+  },
+  {
+    "type": "工具使用",
+    "noteList": [
+      {
+        "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/git.png",
+        "noteInfo": "Git",
+        "path": "Git/README.md"
+      }
+    ]
+  }
+]
