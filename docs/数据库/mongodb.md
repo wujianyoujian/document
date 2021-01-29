@@ -38,3 +38,17 @@ db.createUser({
   ]
 })
 ```
+## 文档操作
+
+### 查找
+### 增加
+### 更新
+* 在字段为数组的数据添加新的数据
+```javascript
+const info = await Facility.findByIdAndUpdate(facilityId, {
+  $push: {
+    logs: log,
+  },
+})
+```
+### 删除

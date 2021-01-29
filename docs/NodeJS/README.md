@@ -58,3 +58,11 @@ console.timeEnd('doSomething')
 > `yarn global list` 全局安装模块的列表
 
 
+## 项目中一些文件详解
+
+### `.prettierrc.json`
+> 格式化配置文件  
+[参数](https://www.cnblogs.com/oneweek/p/11236515.html)  
+[编辑器配置](https://prettier.io/docs/en/editors.html)  
+* 在`vscode`中使用
+* 在`webstorm`中使用
