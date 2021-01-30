@@ -245,3 +245,8 @@
 !> 有时候出现仓库并不存在的情况, 可能是因为远程仓库的地址变了,只需要改变本地关联的地址就可以了  
 
 ?> `git remote set-url origin <repo_url>`
+
+!> push了, 代码没有生效, 发现是git没有跟踪文件大小写的变化. 因此需要开启大小写
+
+?> `git config core.ignorecase` 默认是`true`  
+`git config core.ignorecase false`
