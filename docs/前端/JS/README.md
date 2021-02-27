@@ -88,8 +88,6 @@
 [正则表达式语法](https://www.runoob.com/regexp/regexp-tutorial.html)  
 [正则表达式函数](https://www.runoob.com/jsref/jsref-obj-regexp.html)  
 
-
-
 ## 事件机制
 
 > [事件机制](https://zhuanlan.zhihu.com/p/73091706)
@@ -131,3 +129,8 @@ btn.onclick = throttle(() => {
   console.log('节流')
 })
 ```
+
+## 高级部分
+### this的指向
+
+## `ES6`
