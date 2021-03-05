@@ -32,7 +32,19 @@
 ### router传参
 > [router传参](https://router.vuejs.org/zh/guide/essentials/passing-props.html#%E5%B8%83%E5%B0%94%E6%A8%A1%E5%BC%8F)
 
-给路
+
+## 动画
+```css
+.slide-right-enter, .slide-right-leave-to {
+  transform: translate3d(100%, 0, 0);
+}
+.slide-right-enter-to, .slide-right-leave {
+  transform: translate3d(0, 0, 0);
+}
+.slide-right-enter-active, .slide-right-leave-active {
+  transition: all .2s ease-in-out;
+}
+```
 
 ## 使用
 ### 路径
