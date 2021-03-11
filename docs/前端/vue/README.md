@@ -1,5 +1,10 @@
 # Vue
 > 以2.6或3.0的语法进行学习vue基础部分
+
+## `项目准备`
+1. 删除多余文件
+2. 准备数据，请求封装
+3. 从上往下写
 ## `Router`
 > [VueRouter](https://router.vuejs.org/zh/guide/essentials/navigation.html)
 
