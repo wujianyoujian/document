@@ -74,3 +74,5 @@ module.exports = {
     }
 }
 ```
+
+## 原理
