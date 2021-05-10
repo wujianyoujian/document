@@ -133,4 +133,7 @@ btn.onclick = throttle(() => {
 ## 高级部分
 ### this的指向
 
+### 模块化
+
+
 ## `ES6`
