@@ -5,11 +5,11 @@
 ## 快捷操作
 ### `ctrl + T` 查看一个类的继承关系树，自顶向下
 
-## 操作
-1. url
-2. driver
-3. register
-4. connect
+## 建立数据库连接操作
+1. `url`
+2. `driver`
+3. `register`
+4. `connect`
 
 ### statement
 

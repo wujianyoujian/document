@@ -1,24 +1,37 @@
 ## `JavaWeb`
-* `web.xml`配置文件
 
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
-         version="4.0">
-</web-app>
-```
+### 创建一个javaWeb项目
+1. 创建一个存放web的目录和web.xml配置文件，web/WEB-INF/web.xml
+    ```xml
+    <?xml version="1.0" encoding="utf-8" ?>
+    <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+            version="4.0">
+    </web-app>
+    ```
+2. 将项目标记成`javaweb`项目，在`project structure`中`facets`，点击添加+，为web。再在`Artifacts`中添加`web application: exploded/from module`
 
-## jar包
+3. 配置`tomcat`, 在`Run/Debug configurations`中添加`Tomcat > local`,在`Deployment`中
+4. 在web目录创建一个`index.jsp`, 点击运行最后就会运行项目
+
+## 使用到的jar包
+### servlet包
 * servlet-api
 * jsp-api
 * jstl
 * standard
+### jdbc包
+* mysql-connect
+* druid
+
 ## Tomcat服务器
+
 ## servlet
 > 第一次访问的时候加载执行init方法
+
 ### 生命周期
+
 ### url匹配
 精准匹配
 路径匹配
@@ -32,6 +45,7 @@
 ### 配置
 
 #### 注解方式
+
 #### xml文件方式配置
 
 ### 使用
@@ -65,15 +79,15 @@
 </div>
 ```
 #### 上下文对象
-* pagecontext
-* request
+* `pagecontext`
+* `request`
   * 方法
     * `request.getScheme()` => `http`
     * `request.getServerName()` => `127.0.0.1`
     * `request.getServerPort()` => `8000`
-    * `request.getContextPath()` => /web
-* session
-* application
+    * `request.getContextPath()` => `/web`
+* `session`
+* `application`
 
 #### 内置对象
 
