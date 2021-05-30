@@ -13,6 +13,8 @@
 | 输入流 | `InputStream` | `Reader` |
 | 输出流 | `OutputStream` | `Writer` |
 
+![](./img/ioStream.jpg)
+`
 * 文件流
 * `FileInputStream`
 * `FileOutputStream`
@@ -68,64 +70,64 @@ public class StreamTest {
 * 注意char保存的数据的长度
 ```java
 @Test
-    public void test2() throws IOException {
-        File file = new File("./io/test/2.txt");
-        FileReader fr = new FileReader(file);
-        char[] cbuf = new char[4];
-        int len;
-        while((len = fr.read(cbuf)) != -1) {
-            System.out.print((new String(cbuf, 0, len)));
-        }
-        fr.close();
+public void test2() throws IOException {
+    File file = new File("./io/test/2.txt");
+    FileReader fr = new FileReader(file);
+    char[] cbuf = new char[4];
+    int len;
+    while((len = fr.read(cbuf)) != -1) {
+        System.out.print((new String(cbuf, 0, len)));
     }
+    fr.close();
+}
 ```
 
 #### `FileWrite`
 * `write`
 ```java
 public void test4() throws IOException {
-        File file = new File("./io/test/2.txt");
-        // 添加原有文件
-        FileWriter fileWriter = new FileWriter(file, true);
-        fileWriter.write("I have a dream");
-        fileWriter.close();
-    }
+    File file = new File("./io/test/2.txt");
+    // 添加原有文件
+    FileWriter fileWriter = new FileWriter(file, true);
+    fileWriter.write("I have a dream");
+    fileWriter.close();
+}
 ```
 * 复制
 
 ```java
 @Test
-    public void test1() throws FileNotFoundException {
-        FileInputStream fileInputStream = null;
-        FileOutputStream fileOutputStream = null;
-        try {
-            File file = new File("./io/uni.png");
-            File file1 = new File("./io/uni1.png");
-            fileInputStream = new FileInputStream(file);
-            fileOutputStream = new FileOutputStream(file1);
-            byte[] buffer = new byte[10];
-            int len;
-            while ((len = fileInputStream.read(buffer)) != -1) {
+public void test1() throws FileNotFoundException {
+    FileInputStream fileInputStream = null;
+    FileOutputStream fileOutputStream = null;
+    try {
+        File file = new File("./io/uni.png");
+        File file1 = new File("./io/uni1.png");
+        fileInputStream = new FileInputStream(file);
+        fileOutputStream = new FileOutputStream(file1);
+        byte[] buffer = new byte[10];
+        int len;
+        while ((len = fileInputStream.read(buffer)) != -1) {
 //                System.out.print(new String(buffer, 0, len));
-                fileOutputStream.write(buffer, 0, len);
-            }
+            fileOutputStream.write(buffer, 0, len);
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+    } finally {
+        try {
+            assert fileInputStream!= null;
+            fileInputStream.close();
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                assert fileInputStream!= null;
-                fileInputStream.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            try {
-                assert fileOutputStream != null;
-                fileOutputStream.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        }
+        try {
+            assert fileOutputStream != null;
+            fileOutputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
+}
 ```
 
 #### `BufferedRead`
