@@ -7,6 +7,11 @@
 > 第一次访问的时候加载执行init方法
 #### 生命周期
 
+* 创建servlet对象
+* 执行init()初始化方法
+* 处理请求，doGet，doPost
+* 销毁
+
 #### url匹配
 * 精准匹配
 * 路径匹配
@@ -46,6 +51,27 @@
         <location>/WEB-INF/page/error/404.jsp</location>
     </error-page>
     ```
+
+#### 初始化参数
+```xml
+<servlet>
+    <servlet-name>userServlet</servlet-name>
+        <servlet-class>com.wujianyoujian.controller.UserServlet</servlet-class>
+    <init-param>
+        <param-name>password</param-name>
+        <param-value>123456</param-value>
+    </init-param>
+</servlet>
+```
+
+```java
+class TestServlet extends HttpServlet {
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        this.config = config
+    }
+}
+```
 
 #### 配置过滤器
 * `filter` - `interface`
@@ -96,7 +122,7 @@ public class HttpFilter implements Filter {
 }
 ```
 ### JSP
-* 在jsp页面中无法直接访问`WEB-INF`下的静态文件, 使用`<%@ include %>` `<JSP:include page=""></JSP>`
+* 在jsp页面中无法直接访问`WEB-INF`下的静态文件, 使用`<%@include %>` `<JSP:include page=""></JSP>`
 #### JSP指令
 ##### `page`, 指定响应的一些参数，编码，可以导入包
 ##### `include` 引入页面  
@@ -153,6 +179,10 @@ public class HttpFilter implements Filter {
 #### 监听器
 * 监听容器的变化
 * `request`, `http`
+
+#### 虚拟文件路径映射
+在IDEA中进行设置, 在`run configurations`的`tomcat`的`deployment`中添加
+![avatar](./img/printImage1.png)
 
 ## 流程
 ### 创建一个javaWeb项目

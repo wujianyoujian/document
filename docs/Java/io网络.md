@@ -108,7 +108,8 @@ public void test1() throws FileNotFoundException {
         byte[] buffer = new byte[10];
         int len;
         while ((len = fileInputStream.read(buffer)) != -1) {
-//                System.out.print(new String(buffer, 0, len));
+            // System.out.print(new String(buffer, 0, len));
+            // 每次buffer读取的字节，从0开始，buffer最后的位置写入
             fileOutputStream.write(buffer, 0, len);
         }
     } catch (IOException e) {
