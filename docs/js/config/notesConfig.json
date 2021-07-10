@@ -23,6 +23,11 @@
         "path": "前端/angular/README.md"
       },
       {
+        "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/angular.png",
+        "noteInfo": "react",
+        "path": "前端/react/README.md"
+      },
+      {
         "imgUrl": "https://gitee.com/wujianyoujian/picture-bed/raw/master/image/app.png",
         "noteInfo": "uni-app",
         "path": "前端/uni-app/README.md"
