@@ -109,7 +109,7 @@
 * 参数`(mapStateToProps, mapDispatchToProps)`
 * 可以在组件的props中获取`state`，和派发`action`
 
-### 基础使用
+#### 基础使用
 ?> connect，会将state和dispatch合并到组件的props，这里的合并是平级的，也就是说，在state对象里面的属性值，会变成props里面的属性值
 
 !> 好像使用connect获取state值会有问题，如直接在jsx中使用this.props会有问题
@@ -196,15 +196,17 @@
     ```
 
 ### `reducer`拆分
+?> 在使用`connect`获取`state`时候，`mapStateToProps`直接返回`state -> this.props -> {data1, data2}`, `mapStateToProps`返回`state.data1 -> this.props -> data1`
 * `combineReducers`
-```js
-import reducer1 from './reducers/reducer1.js'
-import reducer2 from './reducers/reducer2.js'
+  ```js
+  import reducer1 from './reducers/reducer1.js'
+  import reducer2 from './reducers/reducer2.js'
 
-const reducerRoot = combineReducers({
-  data1: reducer1,
-  data2: reducer2
-})
-```
+  const reducerRoot = combineReducers({
+    data1: reducer1,
+    data2: reducer2
+  })
+  ```
+
 
 ### 异步`action`
