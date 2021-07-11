@@ -109,6 +109,7 @@
 * 会随着变化而变化
 * 不要直接修改state的值， 使用setState
 * state 更新是异步的，无法使用更新的值，来改变下一个状态
+* setState 会重新执行render函数重新渲染
 ## 使用
 
 ### 遍历渲染
@@ -176,7 +177,7 @@ function Component1(props) {
   }
   // 2. 在函数定义的时候或者绑定事件的时候使用箭头函数
   class MyBtn extends React.Component {
-    clickHandle: () => {
+    clickHandle = () => {
       console.log(this) // Mybtn {}
     }
     render() {
