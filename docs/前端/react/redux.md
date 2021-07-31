@@ -72,7 +72,7 @@
 
 5. 监听`state`的变换，在`componentWillDidMount`生命周期的时候设置监听器，设置后每次`dispatch`都会监听变化
 
-    ```js
+    ```jsx
     import React from 'react'
     import { store } from './store/index.js'
     import { plusAction, minusAction } from './actions/index.js'
@@ -140,7 +140,7 @@
     export default createStore(reducer);
     ```
 2. 在需要的使用的最外层包裹`Provider`, 使用`store`作为参数传入
-    ```js
+    ```jsx
     import { Provider } from 'react-redux';
 
     <Provider store={ store }>
@@ -148,7 +148,7 @@
     </Provider>
     ```
 3. 在需要改变state状态的组件中使用`connect(null, mapDispathToProps)(Btn)`使用第二个参数，在`Btn`组件中可以通过`this.props`获取dispatch相应的方法，执行方法就是相当于执行`stroe.dispatch({type: 'PLUS'})`
-    ```js
+    ```jsx
     import React from 'react';
 
     class Btn extends React.Component {
@@ -177,7 +177,7 @@
     export default connect(null, mapDispatchToProps)(Btn);
     ```
 4. 在需要获取state值的地方使用`connect(mapStateToProps)`的第一个方法，就可以直接通过`this.props`获取
-    ```js
+    ```jsx
     import React from 'react';
 
     class Text extends React.Component {
@@ -207,6 +207,72 @@
     data2: reducer2
   })
   ```
+* 其他用法与上面差不多
 
 
 ### 异步`action`
+
+#### `redux-thunk`
+1. 创建`store`，加入中间件
+    ```js
+    import { createStore, applyMiddleWare } from 'redux';
+    import thunk from 'redux-thunk';
+    import { reducer } from './reducers/index.js';
+
+    export const store = createStore(reducer, applyMiddleWare(thunk));
+    ```
+
+2. 创建异步的`creator action`
+    ```js
+    export const fetchList = () => {
+      return async (dispatch) => {
+        // 获取数据
+        const list = await getList(param)
+        dispatch({
+          type: 'GET_LIST',
+          list
+        })
+      }
+    };
+    ```
+3. 使用`connect`进行`dispatch`，将数据存放在store中
+    ```jsx
+    import { connect } from 'react-redux'
+    import { fetchList } from './actions'
+
+    const Btn = (props) => {
+      return (
+        <button onClick={props.getList}>click</button>
+      )
+    }
+
+    const mapDispatchToProps = (dispatch) => {
+      return {
+        getList: () => {
+          dispatch(fetchList)
+        }
+      }
+    }
+
+    export default connect(null, mapDispatchToProps)(Btn)
+    ```
+4. 获取在`store`中的`lis`t数据
+    ```jsx
+    import { connect } from 'react-redux'
+
+    const Text = (porps) => {
+      return (<div>
+        <ul>
+          {
+            props.list?.length ? props.list.map((item, index) => (
+              <li key={index}>{item.title}</li>
+            ))
+          }
+        </ul>
+      </div>)
+    }
+    const mapStateToProps = (state) => {
+      return state
+    }
+    export default connect(mapStateToProps, null)(Text)
+    ```

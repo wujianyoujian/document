@@ -40,17 +40,17 @@
 * 在JSX中属性包括原生属性，会使用小驼峰的形式
 * JSX会自动进行转义，不需要担心xss攻击
 
-  ```js
+  ```jsx
   const helloWord = (<h1>Hello World</h1>);
   ```
 
 ### 编译过程
 * js
-  ```js
+  ```jsx
   const helloWorld = (<h1 className="title">Hello World</h1>);
   ```
 * js
-  ```js
+  ```jsx
   const helloWorld = React.createElement({
     'h1',
     {className, 'title'},
@@ -64,7 +64,7 @@
 * 在组件内添加相应式数据，在组件的实现类里面重写构造函数，在`this.state = {}`里面添加数据和`vue`里面的
 `data () { return {  } }`一样
 
-  ```js
+  ```jsx
   class MyButton extends React.Component {
     constructor(props) {
       super(props);
@@ -80,7 +80,7 @@
 ### 函数式组件
 * 不需要render函数， 直接return JSX对象
 
-  ```js
+  ```jsx
   function MyButton(props) {
     return (
       // 在onClick中没有箭头函数也没有, 也没有()执行符号
@@ -95,7 +95,7 @@
 * 采用小驼峰命名方式
 * 最好不要在自定义的组件上添加事件，需要在`html`上添加事件, 因为在自定义组件上添加事件会被当作传值给组件的属性, 当属性值为方法的时候也是可以被组件传递的
 
-  ```js
+  ```jsx
   <button className="square" onClick={() => { this.props.changeCurrentHandle() }}>
     {this.props.value}
   </button>
@@ -117,7 +117,7 @@
 * key值帮助react识别哪些元素是被改变了
 * key应该在需要循环的元素上添加
 * 在兄弟节点中是唯一的，在全局可以是相同的
-```js
+```jsx
 function Component1 () {
   return (
     <ul>
@@ -148,7 +148,7 @@ function Component1(props) {
 ### this指向问题
 * 在以类编写的组件中
 
-  ```js
+  ```jsx
   class MyBtn extends React.Component {
     clickHandle () {
       console.log(this) // undefined
