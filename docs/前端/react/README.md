@@ -1,10 +1,10 @@
 # 基础
-
+对react技术栈的学习和记录
 ## 安装
 * 安装一个普通的`react`应用  
 > `npx create-react-app <react-name>`  
 
-    npx在检测到本地没有 create-react-app 的这个命令后， 会向网上的npm注册表中查找相应的命令进行安装，这样相比于vue来说不需要本地安装手脚架工具
+    `npx`在检测到本地没有 create-react-app 的这个命令后， 会向网上的npm注册表中查找相应的命令进行安装，这样相比于vue来说不需要本地安装手脚架工具
 
 ## API
 ### `ReactDOM.render`
@@ -12,6 +12,7 @@
   > `element` 需要渲染的内容，可以是原生的dom，也可以是react中的组件，以根的形式存在   
   > `container` 挂载的容器，就是渲染的dom会在container以子代标签的形式存在 
 
+一个`react`最小的应用
 * 使用
   ```js
   import ReactDOM from "react-dom";
@@ -34,11 +35,11 @@
 
 
 ## JSX
-* 在vs code中使用JSX， 使用`Babel JavaScript`正确高亮显示`JSX`
-* 推荐将JSX的内容放在()中
-* JSX也是一个函数表达式, 会被编译成普通的函数进行调用
-* 在JSX中属性包括原生属性，会使用小驼峰的形式
-* JSX会自动进行转义，不需要担心xss攻击
+* 在`vs code`中使用JSX， 使用`Babel JavaScript`插件正确高亮显示`JSX`
+* 推荐将`JSX`的内容放在()中
+* `JSX`也是一个函数表达式, 会被编译成普通的函数进行调用
+* 在`JSX`中属性包括原生属性，会使用小驼峰的形式
+* `JSX`会自动进行转义，不需要担心`xss`攻击
 
   ```jsx
   const helloWord = (<h1>Hello World</h1>);
