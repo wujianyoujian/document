@@ -5,3 +5,4 @@ node_modules
 # editor
 .vscode
 .idea
+*pdf
