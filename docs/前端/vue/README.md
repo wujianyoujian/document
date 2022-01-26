@@ -1,10 +1,94 @@
 # Vue
 > 以2.6或3.0的语法进行学习vue基础部分
 
+## vue 3.x
+* 组件不必有唯一的根标签
+* `组合式API`
+* `...more`
+
 ## `项目准备`
 1. 删除多余文件
 2. 准备数据，请求封装
 3. 从上往下写
+
+## Vue API和使用
+
+### 计算属性
+* 有依赖项
+* 缓存
+  > 没有发生变化的时候会使用上一次的值
+* 有`getter`, `setter`方法
+### 插槽
+> 默认default
+
+* 基本使用
+  ```vue
+  <!-- to-do-button.vue -->
+  <button>
+    <slot>default</slot>  
+  </button>
+  <!-- app.vue -->
+  <to-do-button>{{ list }}</to-do-button>
+  ```
+
+* 具名插槽
+  ```vue
+  <!-- base-layout.vue -->
+  <template>
+    <header>
+      <slot name="header"></slot>
+    </header>
+    <main>
+      <slot></slot>
+    </main>
+    <footer>
+      <slot name="footer"></slot>
+    </footer>
+  </template>
+  <!-- app.vue -->
+  <base-layout>
+    <template v-slot:header>header</template>
+    <template v-slot:default>main</template>
+    <template v-slot:footer>footer</template>
+  </base-layout>
+  ```
+
+* 作用域插槽
+  ```vue
+  <!-- to-do-list.vue -->
+  <template>
+    <ul>
+      <li v-for="(item, index) in items">
+        <!-- {{ item }} -->
+        <!-- 可以子组件的值，在父组件中进行自定义，作为内容传递给slot -->
+        <slot :item="item"></slot>
+      </li>
+    </ul>
+  </template>
+
+  <script lang="ts">
+  import { defineComponent } from 'vue'
+
+  export default defineComponent({
+    name: 'to-do-list',
+    data() {
+      return {
+        items: ['Feed a cat', 'Buy milk']
+      }
+    }
+  })
+  </script>
+
+  <style></style>
+
+  <!-- app.vue -->
+  <to-do-list>
+    <template v-slot:default="{ item }">
+      {{ item + ' text' }}
+    </template>
+  </to-do-list>
+  ```
+
 ## `Router`
 > [VueRouter](https://router.vuejs.org/zh/guide/essentials/navigation.html)
 
@@ -58,7 +142,8 @@
 ?> 表示根路径`src`
 
 ### 配置文件
-> `vue.config.js`
+
+#### `vue.config.js` 
 
 * 定义路径别名
 ```js
@@ -75,4 +160,4 @@ module.exports = {
 }
 ```
 
-## 原理
+
