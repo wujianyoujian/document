@@ -5,6 +5,6 @@ node_modules
 # editor
 .vscode
 .idea
+.history
 *pdf
 
-.history
