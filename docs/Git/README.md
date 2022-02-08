@@ -250,3 +250,7 @@
 
 ?> `git config core.ignorecase` 默认是`true`  
 `git config core.ignorecase false`
+
+!> 总是`pull`或者`push`不上去, `Open SSL` 连接失败等问题
+
+?> `git config --global http.sslVerify "false"`
