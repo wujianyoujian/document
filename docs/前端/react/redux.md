@@ -7,7 +7,7 @@
 ## 安装
 
 ### 安装redux
-> `yarn add reduex`
+> `yarn add redux`
 
 ### 安装react-redux
 > `yarn add react-redux`
@@ -24,7 +24,7 @@
 * 本质是函数
 * 需要有`return state`, 才能被store接收
 
-> 相当于action为对象的key，reducer表示key对应的方法，🈶️action确定，reducer来执行
+> 相当于action为对象的key，reducer表示key对应的方法，由action确定，reducer来执行
 
 ## 基本使用
 ?> 在`vue`中 `state`直接存放在`store`中，而在`react`中`state`相当于存放在`reducer`中，在`reducer`中的方法中改变值的变化，将`state`返回给`store`，而在外可以通过`store`监听和获取`state`

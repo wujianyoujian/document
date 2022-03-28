@@ -135,5 +135,10 @@ btn.onclick = throttle(() => {
 
 ### 模块化
 
+### 原型
+
+> 看图  
+
+![](./img/prototype.png)
 
 ## `ES6`
