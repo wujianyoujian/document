@@ -254,3 +254,20 @@
 !> 总是`pull`或者`push`不上去, `Open SSL` 连接失败等问题
 
 ?> `git config --global http.sslVerify "false"`
+
+!> 本地合并有很多冲突，不想合并了
+
+?> `git merge --abort`
+
+!> 本地拉取远程分支有冲突，不想拉取了，回到拉取之前的状态
+
+?> 后悔药 
+1. 查看记录 `git reflog`
+2. 找到未拉取之前的提交记录 
+3. `git reset --hard <commit_id>`
+
+!> 本地有更改，提交了。想用远程的分支覆盖本地的，其他操作太麻烦了。
+
+?> 拉取远程不合并，本地reset到远程分支 
+1. `git fetch -all`
+2. `git reset --hard origin/master`

@@ -206,7 +206,13 @@ function Component1(props) {
 
 ### `Hook`
 
-#### `React.`
+#### `React.memo`
+
+#### `React.useCallback`
+
+#### `React.useMemo`
+
+[useCallback()、useMemo() 解决了什么问题？](https://www.jianshu.com/p/014ee0ebe959)
 
 ### 时间处理
 #### `dayjs`
